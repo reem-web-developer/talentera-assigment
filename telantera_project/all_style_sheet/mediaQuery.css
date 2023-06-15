@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+
+  header .container ul li:not(:first-child),
+  header #search_ico {
+    display: none;
+  }
+
+  header .container .dropdown {
+    display: block;
+  }
+
+  .text {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .work .container {
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-us .container {
+    flex-direction: column;
+  }
+
+  .contact-us .info {
+    width: 100%;
+  }
+}

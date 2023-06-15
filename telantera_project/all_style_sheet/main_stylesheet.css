@@ -1,0 +1,390 @@
+/*start variables*/
+:root {
+  --main-color: rgb(0, 148, 128);
+  --secondary-color: #000000;
+  --third-color: #ffffff;
+  --font_family: "Work Sans", sans-serif;
+}
+
+/*end variables*/
+
+/*global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font_family);
+}
+
+/*end global rules */
+/* start main component */
+.container {
+  padding: 0 15px;
+  margin: auto;
+}
+
+section,
+footer {
+  padding: 60px 15px 60px 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 12px;
+}
+
+i {
+  padding-right: 5px;
+}
+
+/* end main component */
+
+/* start header  */
+
+header .container {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header i {
+  color: var(--third-color);
+}
+
+ul {
+  list-style-type: none;
+  padding: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  display: block;
+}
+
+header ul li:last-child {
+  position: relative;
+}
+
+.dropdownlist_content {
+  background-color: var(--secondary-color);
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  top: 102%;
+  left: 70%;
+  min-width: 200px;
+  display: block;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+header ul li:hover {
+  background-color: var(--main-color);
+}
+
+/*  start style  the dropdown for small screen */
+.dropdown {
+  position: relative;
+  display: none;
+}
+
+.dropdown-toggle {
+  background-color: var(--secondary-color);
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer
+}
+
+.dropdown-menu {
+  right: 0;
+  font-size: 14px;
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  padding: 12px 16px;
+}
+
+.dropdown-menu li:hover {
+  background-color: var(--main-color);
+}
+/* end style  the dropdown for small screen */
+/* end header  */
+
+/*  start landing section */
+.landing {
+  position: relative;
+}
+
+.landing img {
+  max-width: 100%;
+  min-height: 180px;
+}
+
+.landing .text {
+  position: absolute;
+  max-width: fit-content;
+  padding: 10px;
+  z-index: 100;
+  background-color: var(--secondary-color);
+  color: var(--third-color);
+  left: 5%;
+  bottom: 3%;
+}
+
+/* below second approch to make absolute label text */
+/* .landing ::after{
+    content: "Talentera";
+    position: absolute;
+    width: fit-content;
+   padding:10px;
+    z-index: 100;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    left: 5px;   
+} */
+
+/*  end landing section */
+
+/* media query to response the webpage  */
+
+
+header .container .dropdown-menu {
+  display: none;
+}
+
+/*  End media query to response the webpage  */
+/* start team member */
+.member h2,
+h3,
+h4 {
+  width: fit-content;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.card_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-top: 30px;
+}
+
+.card_box .member_img {
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+/* end team member */
+/* start our work  */
+.work {
+  position: relative;
+  padding: 60px 0;
+  background-color: #333333;
+}
+
+.work .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  color: var(--third-color);
+}
+
+.work .container .card:not(:first-of-type) {
+  color: var(--secondary-color);
+  background-color: var(--third-color);
+}
+
+.work .container .card:first-of-type {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.work .container .card .info {
+  padding: 10px;
+}
+
+.work .container img {
+  max-width: 100%;
+}
+
+.work-head {
+  text-align: left;
+}
+
+/* * end our work  */
+/* start contact us  */
+.contact-us {
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.contact-us .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-us .info {
+  width: 40%;
+  color: #333333;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+}
+
+.contact-us .info ul li {
+  list-style-type: none;
+  padding-top: 12px;
+}
+
+.contact-us .info ul li i {
+  color: var(--main-color);
+}
+
+.contact-us .info h2:first-of-type {
+  width: fit-content;
+  border-bottom: 5px solid var(--main-color);
+}
+
+.contact-us .container form {
+  padding: 20px 20px 0 20px;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+  background-color: var(--third-color);
+  flex-grow: 1;
+}
+
+.contact-us .container form input,
+label,
+textarea {
+  display: block;
+  height: 25px;
+  width: 100%;
+}
+
+.contact-us .container form input,
+textarea {
+  border-style: none none solid none;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e9e6e6;
+}
+
+.contact-us .container form input[type="label"] {
+  border-style: none;
+}
+
+.contact-us .container form .last_line_form {
+  display: flex;
+  justify-content: space-between;
+  border-style: none;
+}
+
+.contact-us .container form .checkbox_div {
+  display: flex;
+  min-width: 150px;
+  flex-wrap: nowrap;
+}
+
+.checkbox_label {
+  margin-top: 5px;
+}
+
+.contact-us .container form input[type="checkbox"] {
+  width: 20px;
+}
+
+.contact-us .container form input[type="submit"] {
+  padding: 0 15px;
+  cursor: pointer;
+  width: fit-content;
+  background-color: var(--secondary-color);
+  color: var(--third-color);
+}
+
+.contact-us .container form input,
+textarea:focus {
+  outline: none;
+}
+
+/* to avoid redundant combine the mutual style*/
+.work i,
+.contact-us i {
+  font-size: 18px;
+  z-index: 1;
+  color: var(--third-color);
+  padding: 15px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -22px;
+  right: 15px;
+}
+
+.contact-us i {
+  color: var(--third-color);
+  background-color: var(--secondary-color);
+}
+
+.work i {
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+
+/* end contact us  */
+/* start footer */
+footer {
+  background-color: var(--secondary-color);
+}
+
+/* footer h2{
+
+} */
+footer ul,
+h2 {
+  text-align: center;
+}
+
+footer h2 {
+  color: var(--main-color);
+}
+
+footer ul {
+  margin-top: 35px;
+}
+
+footer ul li {
+  display: inline;
+  width: 50px;
+  padding: 10px;
+  margin-left: 0px;
+  color: var(--third-color);
+  background-color: var(--main-color);
+}
+
+/* end footer */
